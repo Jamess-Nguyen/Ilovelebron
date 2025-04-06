@@ -1,0 +1,16 @@
+.header-title {
+    text-align: center;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header-credits {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 15px 0 15px;
+}
