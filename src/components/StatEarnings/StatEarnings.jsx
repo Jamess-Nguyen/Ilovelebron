@@ -4,6 +4,7 @@ import { StatCard } from './StatCard.jsx';
 const StatEarnings = () => {
     const [playerStats, setPlayerStats] = useState(null);
     const URL = `http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2025/types/2/athletes/1966/statistics/0?lang=en&region=us`;
+    const currentEarnings = Math.floor((new Date() - new Date("2024-07-01T00:00:00")) / 1000) * 1.61;
 
     useEffect(() => {
         const fetchPlayerStats = async () => {
@@ -53,12 +54,11 @@ const StatEarnings = () => {
 
     return (
         <div>
-            <h2>Stat Earnings:</h2>
-            {/* <pre>{JSON.stringify(playerStats, null, 2)}</pre> */}
+            {/* {<pre>{JSON.stringify(playerStats, null, 2)}</pre>} */}
             {
                 playerStats != null && playerStats.map((stat, index) => (
                     <div key={index}>
-                        <div>{stat.displayName}: {stat.value} : { }</div>
+                        <StatCard statperval={currentEarnings / stat.value} statvalue={stat.value} statdisplayname={stat.displayName} statshortname={stat.shortDisplayName} />
                     </div>
                 ))
             }
