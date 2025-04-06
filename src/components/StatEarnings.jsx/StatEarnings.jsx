@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { StatCard } from './StatCard.jsx';
 
 const StatEarnings = () => {
     const [playerStats, setPlayerStats] = useState(null);
@@ -54,6 +55,13 @@ const StatEarnings = () => {
         <div>
             <h2>Stat Earnings:</h2>
             <pre>{JSON.stringify(playerStats, null, 2)}</pre>
+            {
+                playerStats != null && playerStats.map((stat, index) => (
+                    <div key={index}>
+                        <div>{stat.displayName}: {stat.value}</div>
+                    </div>
+                ))
+            }
         </div>
     );
 };
