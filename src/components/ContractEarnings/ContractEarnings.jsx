@@ -12,7 +12,7 @@ const ContractEarnings = () => {
        is retiring soon it doesn't look like we'll do this LMAO
     */
     const visitedTime = useRef(new Date());
-    const total2024Contract = 101350000;
+    const total2024Contract = 101350000 / 2;
 
 
     /* 

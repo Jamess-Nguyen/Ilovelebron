@@ -54,11 +54,11 @@ const StatEarnings = () => {
     return (
         <div>
             <h2>Stat Earnings:</h2>
-            <pre>{JSON.stringify(playerStats, null, 2)}</pre>
+            {/* <pre>{JSON.stringify(playerStats, null, 2)}</pre> */}
             {
                 playerStats != null && playerStats.map((stat, index) => (
                     <div key={index}>
-                        <div>{stat.displayName}: {stat.value}</div>
+                        <div>{stat.displayName}: {stat.value} : { }</div>
                     </div>
                 ))
             }
