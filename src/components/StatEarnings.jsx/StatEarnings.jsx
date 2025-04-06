@@ -9,17 +9,39 @@ const StatEarnings = () => {
             try {
                 const response = await fetch(URL);
                 const data = await response.json();
-                const statsArry = data.splits.categories
+                const statsAry = data.splits.categories // It's an Arry of all Lebrons Stats
+                const targetCategories = {
+                    defense: new Set(['blocks', 'steals']),
+                    general: new Set(['totalRebounds', 'gamesStarted', 'tripleDouble']),
+                    offense: new Set(['assists', 'fieldGoalsMade', 'points', 'threePointFieldGoalsMade'])
+                };
 
-                const defenseArry = statsArry.filter((category, index) => {
-                    if (category.name === 'defensive') {
-                        console.log(`category: ${JSON.stringify(category.stats)}`);
+                const renderedStats = []
+                // Gets the defensive stats
+                renderedStats.push(...statsAry[0].stats.filter((category) => {
+                    if (targetCategories.defense.has(category.name)) {
+                        return true;
                     }
-                    else {
-                        console.log('goku burger');
+                    return false;
+                }));
+
+                // Gets General Stats
+                renderedStats.push(...statsAry[1].stats.filter((category) => {
+                    if (targetCategories.general.has(category.name)) {
+                        return true;
                     }
-                });
-                setPlayerStats(statsArry);
+                    return false;
+                }));
+
+                // Gets Offensive Stats
+                renderedStats.push(...statsAry[2].stats.filter((category) => {
+                    if (targetCategories.offense.has(category.name)) {
+                        return true;
+                    }
+                    return false;
+                }));
+
+                setPlayerStats(renderedStats);
             } catch (err) {
                 console.error("Fetch error:", err);
             }
@@ -31,7 +53,7 @@ const StatEarnings = () => {
     return (
         <div>
             <h2>Stat Earnings:</h2>
-            <p>{JSON.stringify(playerStats, null, 2)}</p>
+            <pre>{JSON.stringify(playerStats, null, 2)}</pre>
         </div>
     );
 };
