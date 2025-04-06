@@ -1,9 +1,10 @@
-import { ProgressBar } from './components/LebronEarnings/ProgressBar.jsx'
-
+import { ContractEarnings } from './components/ContractEarnings/ContractEarnings.jsx'
+import { StatEarnings } from './components/StatEarnings.jsx/StatEarnings'
 function App() {
   return (
     <>
-      <ProgressBar />
+      <ContractEarnings />
+      <StatEarnings />
     </>
   )
 }

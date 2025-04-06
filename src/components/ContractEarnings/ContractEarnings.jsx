@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react"
 
-const ProgressBar = () => {
+const ContractEarnings = () => {
     const [curDateTime, setCurDateTime] = useState(new Date());
     const [curEarnings, setCurEarnings] = useState(0);
     const [curEarningsSinceVisit, setCurEarningsSinceVisit] = useState(0);
@@ -33,7 +33,6 @@ const ProgressBar = () => {
 
         // Renders the progress bar of how much of the 2024-2025 contract was fulfilled
         const timeDiffSecsContract = Math.floor((new Date() - new Date("2024-07-01T00:00:00")) / 1000);
-        console.log(`timeDiffSecs: ${timeDiffSecsContract} | dollarPerSecs: ${dollarPerSec}`)
         setCurEarnings((timeDiffSecsContract * dollarPerSec).toFixed(2))
 
         // Renders the amount of money leGOAT has made since you've visited the site
@@ -51,4 +50,4 @@ const ProgressBar = () => {
     )
 };
 
-export { ProgressBar };
+export { ContractEarnings };
