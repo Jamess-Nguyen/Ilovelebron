@@ -5,6 +5,12 @@ const ProgressBar = () => {
     const [curEarnings, setCurEarnings] = useState(0);
     const [curEarningsSinceVisit, setCurEarningsSinceVisit] = useState(0);
 
+    /* BONUS NOTE:
+       https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/athletes/1966
+       If you ever wanna get freaky with it, this is an endpoint that contains contract information
+       about Lebron. We can actually make the contract progress bar dynamic. But since my king
+       is retiring soon it doesn't look like we'll do this LMAO
+    */
     const visitedTime = useRef(new Date());
     const total2024Contract = 101350000;
 
