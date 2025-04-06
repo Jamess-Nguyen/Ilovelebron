@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { StatCard } from './StatCard.jsx';
+import './StatEarnings.css';
 
 const StatEarnings = () => {
     const [playerStats, setPlayerStats] = useState(null);
@@ -54,14 +55,21 @@ const StatEarnings = () => {
 
     return (
         <div>
-            {/* {<pre>{JSON.stringify(playerStats, null, 2)}</pre>} */}
-            {
-                playerStats != null && playerStats.map((stat, index) => (
-                    <div key={index}>
-                        <StatCard statperval={currentEarnings / stat.value} statvalue={stat.value} statdisplayname={stat.displayName} statshortname={stat.shortDisplayName} />
-                    </div>
-                ))
+
+            {/* 
+                Uncomment to review entire JSON output
+                {<pre>{JSON.stringify(playerStats, null, 2)}</pre>} 
+             */
             }
+            <div className='stat-container'>
+                {
+                    playerStats != null && playerStats.map((stat, index) => (
+                        <div className='statcard-container' key={index}>
+                            <StatCard statperval={currentEarnings / stat.value} statvalue={stat.value} statdisplayname={stat.displayName} statshortname={stat.shortDisplayName} />
+                        </div>
+                    ))
+                }
+            </div>
         </div>
     );
 };

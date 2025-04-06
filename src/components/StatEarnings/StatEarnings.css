@@ -1,0 +1,21 @@
+.stat-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.statcard-container {
+    flex: 1 1 calc(33.333% - 15px);
+    max-width: calc(33.333% - 15px);
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+@media (max-width: 1250px) {
+    .statcard-container {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

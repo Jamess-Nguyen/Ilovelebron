@@ -1,0 +1,28 @@
+.statcard {
+    width: 25%;
+    min-width: 300px;
+    min-height: 140px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.statcard h1 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.statcard p {
+    font-size: 1.2rem;
+    color: rgba(68, 63, 63, 0.563);
+    margin: 0 0 15px 0;
+
+}
+
+.statcard hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+}
