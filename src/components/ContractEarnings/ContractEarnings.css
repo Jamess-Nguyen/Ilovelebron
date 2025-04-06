@@ -1,0 +1,17 @@
+.contract-cur-earnings {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 15px 0px 15px;
+}
+
+.contract-progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contract-site-earnings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

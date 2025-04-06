@@ -1,4 +1,5 @@
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState, useRef } from 'react';
+import './ContractEarnings.css';
 
 const ContractEarnings = () => {
     const [curDateTime, setCurDateTime] = useState(new Date());
@@ -17,7 +18,7 @@ const ContractEarnings = () => {
 
     /* 
     On Mount does the following:
-    1. Updated curDateTime to current Datetime every 1 second
+    1. Updates curDateTime to current Datetime every 1 second
     */
     useEffect(() => {
         setInterval(() => {
@@ -42,10 +43,22 @@ const ContractEarnings = () => {
 
     return (
         <>
-            <p>Current Earnings: {curEarnings}</p>
-            <p>Percentage Earnings: {(curEarnings / total2024Contract).toFixed(2)}</p>
-            <progress value={(curEarnings / total2024Contract).toFixed(2)} />
-            <p>Visited Time: {visitedTime.current.toLocaleString()} | Earnings Since visit: {curEarningsSinceVisit} </p>
+            <div className='contract-cur-earnings'>
+                <p>2024-2025 Laker Earnings:</p>
+                <p>{curEarnings}</p>
+            </div>
+            <div className='contract-progress'>
+                <progress value={(curEarnings / total2024Contract).toFixed(2)} />
+                <p>Percentage Earnings: {(curEarnings / total2024Contract).toFixed(2)}%</p>
+            </div>
+            <div className='contract-cur-earnings'>
+                <p>Remaining:</p>
+                <p>{(total2024Contract - curEarnings).toFixed(2)}</p>
+            </div>
+            <div className='contract-site-earnings'>
+                <p>Lebron James has earned ${curEarningsSinceVisit} since you visited this site</p>
+            </div>
+
         </>
     )
 };
