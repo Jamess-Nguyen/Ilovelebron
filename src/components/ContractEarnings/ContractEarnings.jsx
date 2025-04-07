@@ -43,23 +43,26 @@ const ContractEarnings = () => {
 
     return (
         <>
-            <div className='contract-cur-earnings'>
-                <p>2024-2025 Laker Earnings:</p>
-                <p>{(curEarnings - 0).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</p>
-            </div>
-            <div className='contract-progress'>
-                <progress value={(curEarnings / total2024Contract).toFixed(2)} />
-                <p>Percentage Earnings: {(curEarnings / total2024Contract).toFixed(2)}%</p>
-            </div>
-            <div className='contract-cur-earnings'>
-                <p>Remaining:</p>
-                <p>{(total2024Contract - curEarnings).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</p>
-            </div>
-            <div className='contract-site-earnings'>
-                <p>Lebron James has earned {(curEarningsSinceVisit - 0).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} since you visited this site</p>
+            <div className='contract-wrapper'>
+                <div className='contract-cur-earnings'>
+                    <p>2024-2025 Laker Earnings:</p>
+                    <p>{(curEarnings - 0).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</p>
+                </div>
+                <div className='contract-progress'>
+                    <progress value={(curEarnings / total2024Contract).toFixed(2)} className="progress-bar" />
+                    <p>Contract Fulfillment: {((curEarnings / total2024Contract) * 100).toFixed(0)}%</p>
+                </div>
+                <div className='contract-cur-earnings'>
+                    <p>Remaining:</p>
+                    <p>{(total2024Contract - curEarnings).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</p>
+                </div>
             </div>
 
+            <div className='contract-site-earnings' style={{ marginBottom: '25px', fontSize: '20px' }}>
+                <p>Lebron James has earned {(curEarningsSinceVisit - 0).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} since you visited this site</p>
+            </div>
         </>
+
     )
 };
 

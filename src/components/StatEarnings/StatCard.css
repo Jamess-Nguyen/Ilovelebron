@@ -6,23 +6,25 @@
     border-radius: 10px;
     text-align: center;
     margin: 0 auto;
+    background-color: white;
 }
 
 .statcard h1 {
     font-size: 2rem;
     color: black;
     margin-bottom: 5px;
+    background-color: white;
 }
 
 .statcard p {
     font-size: 1.2rem;
     color: rgba(68, 63, 63, 0.563);
     margin: 0 0 15px 0;
-
+    background-color: white;
 }
 
 .statcard hr {
     border: none;
     height: 1px;
-    background-color: #ddd;
+    background-color: #e0e0e0;
 }

@@ -3,11 +3,14 @@ import './Header.css'
 const Header = () => {
     return (
         <>
-            <h1 className='header-title'>ILoveLebronJames.xyz</h1>
+            <h1 className='header-title' style={{ fontSize: '50px' }}>ILoveLebronJames.xyz</h1>
             <hr></hr>
             <div className='header-credits'>
-                <p>(Live)</p>
-                <p>Created by Jamer Gamer</p>
+                <p>Created by James</p>
+                <div className="live-indicator">
+                    <span>Live</span>
+                    <span className="live-dot"></span>
+                </div>
             </div>
         </>
     )
