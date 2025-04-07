@@ -2,6 +2,7 @@
   "name": "ilovelebron",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://ilovelebron.xyz",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
