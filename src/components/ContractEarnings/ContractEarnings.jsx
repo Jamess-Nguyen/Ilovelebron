@@ -45,12 +45,12 @@ const ContractEarnings = () => {
         <>
             <div className='contract-wrapper'>
                 <div className='contract-cur-earnings'>
-                    <p>2024-2025 Laker Earnings:</p>
+                    <p>Laker Earnings:</p>
                     <p>{(curEarnings - 0).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</p>
                 </div>
                 <div className='contract-progress'>
                     <progress value={(curEarnings / total2024Contract).toFixed(2)} className="progress-bar" />
-                    <p>Contract Fulfillment: {((curEarnings / total2024Contract) * 100).toFixed(0)}%</p>
+                    <p>2024-2025 Contract Fulfillment: {((curEarnings / total2024Contract) * 100).toFixed(0)}%</p>
                 </div>
                 <div className='contract-cur-earnings'>
                     <p>Remaining:</p>

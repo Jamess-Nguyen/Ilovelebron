@@ -1,4 +1,6 @@
 .app-container {
     margin-left: 12%;
     margin-right: 12%;
+    max-width: 1250px;
+    margin: 0 auto;
 }
