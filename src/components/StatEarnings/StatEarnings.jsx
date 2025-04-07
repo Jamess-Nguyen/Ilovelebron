@@ -4,7 +4,7 @@ import './StatEarnings.css';
 
 const StatEarnings = () => {
     const [playerStats, setPlayerStats] = useState(null);
-    const URL = `http://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2025/types/2/athletes/1966/statistics/0?lang=en&region=us`;
+    const URL = `https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2025/types/2/athletes/1966/statistics/0?lang=en&region=us`;
     const currentEarnings = Math.floor((new Date() - new Date("2024-07-01T00:00:00")) / 1000) * 1.61;
 
     useEffect(() => {
