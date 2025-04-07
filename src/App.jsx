@@ -3,6 +3,7 @@ import { StatEarnings } from './components/StatEarnings/StatEarnings.jsx';
 import { LebronClicker } from './components/LebronClicker/LebronClicker.jsx';
 import { Header } from './components/Header/Header.jsx';
 import { Footer } from './components/Footer/Footer.jsx';
+import { YouTubeEmbed } from './components/YoutubeEmbed/YoutubeEmbed.jsx';
 import './app.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <LebronClicker />
       <ContractEarnings />
       <StatEarnings />
+      <YouTubeEmbed />
       <Footer />
     </div>
   )
