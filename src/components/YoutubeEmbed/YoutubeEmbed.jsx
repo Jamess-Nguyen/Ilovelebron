@@ -21,7 +21,7 @@ const YouTubeEmbed = () => {
                 <iframe
                     width="80%"
                     height="500"
-                    src="https://www.youtube.com/embed/SHiiY4Y_ZmM"
+                    src="https://www.youtube.com/watch?v=tYGOwzv-c6k&ab_channel=TalentedBlake"
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
